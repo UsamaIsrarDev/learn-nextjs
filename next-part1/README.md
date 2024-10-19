@@ -3,7 +3,7 @@ This is a starter template for [Learn Next.js](https://nextjs.org/learn).
 
 ...this will continue from the next-start
 
-In this project I covered these topics          [sumup 00 Oct 24]
+In this project I covered these topics          [sumup 19 Oct 24]
 
 pre-rendering and data fetching
 
