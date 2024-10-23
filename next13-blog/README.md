@@ -44,3 +44,19 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 ...this will continue from the next-dynamic-routing
 
 In this project I covered these topics          [sumup 00 Oct 24]
+
+
+
+
+
+
+
+
+
+
+
+panaverse git repo
+hello world
+editing
+routing
+routegroups => route groups use to organized content
