@@ -1,19 +1,39 @@
 import { useState } from 'react';
 import Head from 'next/head';
 
-import Fuse from 'fuse.js';
-import _ from 'lodash';
+// import Fuse from 'fuse.js';
+// import _ from 'lodash';
+import dynamic from 'next/dynamic';
+import Script from 'next/script';
+
+import Image from 'next/image';
 
 import styles from '../styles/Home.module.css';
-import CodeSampleModal from '../components/CodeSampleModal';
+// import CodeSampleModal from '../components/CodeSampleModal';
+
+function IndexPage() {
+  return (
+    <div>
+      <Script
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=123"
+      />
+    </div>
+  );
+}
+
+const CodeSampleModal = dynamic(() => import('../components/CodeSampleModal'), {
+  ssr: false,
+});
+
 
 export default function Start({ countries }) {
   const [results, setResults] = useState(countries);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const fuse = new Fuse(countries, {
-    keys: ['name'],
-    threshold: 0.3,
-  });
+  // const fuse = new Fuse(countries, {
+  //   keys: ['name'],
+  //   threshold: 0.3,
+  // });
 
   return (
     <div>
@@ -33,7 +53,7 @@ export default function Start({ countries }) {
         </h1>
 
         <div className={styles.heroImage}>
-          <img src="large-image.jpg" alt="Large Image" />
+        <Image src="/large-image.jpg" alt="Large Image" width={3048} height={2024} />
         </div>
 
         <div>
@@ -44,14 +64,18 @@ export default function Start({ countries }) {
             className={styles.input}
             onChange={async (e) => {
               const { value } = e.currentTarget;
+              // Dynamically load libraries
+              const Fuse = (await import('fuse.js')).default;
+              const _ = (await import('lodash')).default;
 
-              const searchResult = fuse
-                .search(value)
-                .map((result) => result.item);
+              const fuse = new Fuse(countries, {
+                keys: ['name'],
+                threshold: 0.3,
+              });
 
-              const updatedResults = searchResult.length
-                ? searchResult
-                : countries;
+              const searchResult = fuse.search(value).map((result) => result.item);
+
+              const updatedResults = searchResult.length ? searchResult : countries;
               setResults(updatedResults);
 
               // Fake analytics hit
@@ -76,10 +100,14 @@ export default function Start({ countries }) {
           <h2 className={styles.secondaryHeading}>Code Sample</h2>
           <p>Ever wondered how to write a function that prints Hello World?</p>
           <button onClick={() => setIsModalOpen(true)}>Show Me</button>
-          <CodeSampleModal
-            isOpen={isModalOpen}
-            closeModal={() => setIsModalOpen(false)}
-          />
+          {
+            isModalOpen && (
+              <CodeSampleModal
+                isOpen={isModalOpen}
+                closeModal={() => setIsModalOpen(false)}
+              />
+            )
+          }
         </div>
       </main>
 
@@ -91,7 +119,7 @@ export default function Start({ countries }) {
         >
           Powered by
           <span className={styles.logo}>
-            <img src="/vercel.svg" alt="Vercel Logo" />
+          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
