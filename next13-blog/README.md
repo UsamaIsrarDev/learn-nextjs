@@ -57,6 +57,8 @@ In this project I covered these topics          [sumup 00 Oct 24]
 
 panaverse git repo
 hello world
-editing
-routing
-routegroups => route groups use to organized content
+routes
+linking
+route groups        => route groups use to organized content
+dynamic segments
+generating static params
