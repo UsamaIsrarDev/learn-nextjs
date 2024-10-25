@@ -153,6 +153,6 @@ In this project I learn these topics,                [sum up Oct 18, 24]
 -css modules for component level .module.css
 -css global for app level global.css
 
-css global create a file _app.js only import global css in this file
-create a top level directory components and create a component layout.js
+-css global create a file _app.js inside pages or app directory only import global css in this file
+-components : create a top level directory components and create a component layout.js
 styling tips
