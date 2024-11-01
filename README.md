@@ -1,3 +1,24 @@
+
+
+
+===========================================================================
+
+
+That’s it for the first lesson. Including these projects.
+next-start , next-pre-rendering , next-dynamic-routes , nextjs-lighthouse , next13-blog , next13-page , tailwind-starter.
+
+
+===========================================================================
+
+
+
+
+
+
+
+
+
+
 L5-tailwind-starter                            ...continue from next13-page
 In this project I covered these topics                  [sum up 25 Oct, 24]
 
