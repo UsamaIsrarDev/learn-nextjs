@@ -1,3 +1,9 @@
+useContext + Route handlers (api)                     Jan 18, 25 - Sat
+
+To avoid dealing with props, we use useContext. 
+
+--------------------------------------------------------------------------
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
