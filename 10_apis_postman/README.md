@@ -8,6 +8,8 @@ https://rapidapi.com/hub
 
 https://pro.coincap.io/api-docs
 
+https://apilayer.com/products/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo
+
 # 📚 API Concepts
 
 This README provides a detailed overview of APIs, their components, tools, and practical examples to help you understand and work with APIs effectively.
