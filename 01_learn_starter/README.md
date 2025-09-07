@@ -14,239 +14,204 @@ https://www.cars.com/
 https://www.telia.no/
 ```
 
-# Next.js – Complete Beginner Guide
+# Next.js & React: 2D User Interface Development
 
-## Course Context
+## Table of Contents
 
-This guide is based on the **Quarter 2 (2D UI Development)** curriculum.
-
-- **2D User Interface Development** → focus of this quarter.
-- **3D Development** → will be covered in Quarter 4.
-- **Core Tracks**:
-  - ☁️ Cloud Computing (Serverless)
-  - ⛓️ Blockchain Development
-  - 🖥️ 2D/3D User Interfaces
-
-The curriculum is **research-based** and aligned with **industry demand**.
-
----
-
-## Why Learn Modern Technologies?
-
-- Companies widely use **React.js** and **Next.js** for modern web apps.
-- These technologies are **future-proof, scalable, and flexible**.
-- Next.js is developed by **Vercel**, a cloud provider known for speed and deployment ease.
-
-**React = Library for UIs**  
-**Next.js = Framework built on top of React**
-
-Both work together for **scalable, performant web apps**.
+1. [Course Overview](#course-overview)
+2. [2D User Interface (UI) Fundamentals](#2d-user-interface-ui-fundamentals)
+3. [Technology Choices](#technology-choices)
+4. [Next.js Overview](#nextjs-overview)
+5. [Key Concepts in Web Application Development](#key-concepts-in-web-application-development)
+6. [Learning Approach](#learning-approach)
+7. [Modern App Flexibility & Developer Experience](#modern-app-flexibility--developer-experience)
+8. [React & User Interfaces](#react--user-interfaces)
+9. [Next.js Framework Details](#nextjs-framework-details)
+10. [Client-Server Architecture](#client-server-architecture)
+11. [Next.js Project Setup](#nextjs-project-setup)
+12. [Development Server](#development-server)
+13. [Page Creation & Routing](#page-creation--routing)
+14. [Static Assets & Images](#static-assets--images)
+15. [Page Metadata & SEO](#page-metadata--seo)
+16. [Adding Scripts & Third-Party Services](#adding-scripts--third-party-services)
+17. [Styling in Next.js](#styling-in-nextjs)
+18. [Layout Components](#layout-components)
+19. [Page Content & Reusability](#page-content--reusability)
+20. [Development & Testing Best Practices](#development--testing-best-practices)
+21. [Best Practices Summary](#best-practices-summary)
 
 ---
 
-## 🏗️ Software Development Lifecycle (SDLC)
+## Course Overview
 
-A typical application development process includes:
+This course focuses on **2D User Interface (UI) Development** as part of the second quarter of the program.
 
-1. **Requirement Analysis**
-2. **Design**
-3. **Development**
-4. **Testing**
-5. **Deployment**
-6. **Updates & Maintenance**
+- 2D UI refers to flat-screen experiences on **mobile phones, tablets, or laptops**.
+- 3D development will be introduced in the fourth quarter.
+- Focus areas include:
 
-Apps (games, mobile, web) are continuously updated to improve features and performance.  
-Developers work in **teams**, each handling different SDLC roles.
+  1. **Cloud Computing** (serverless applications)
+  2. **Blockchain** (limited due to cost; majority of data stored in the cloud)
+  3. **2D/3D UI Design**
 
----
+> Integration with existing technologies, not replacement.
 
-## 🏗️ Setting Up Your First Next.js Project
+## 2D User Interface (UI) Fundamentals
 
-1. Install **Node.js** (LTS recommended).
-2. Create a new Next.js project:
-   ```bash
-   npx create-next-app@latest my-blog
-   cd my-blog
-   npm run dev
-   ```
-3. Open in browser:
-   ```
-   http://localhost:3000
-   ```
+- **Technology Selection:** Choose the right tools and frameworks.
+- **Software Development Life Cycle (SDLC):**
 
----
+  - Requirement gathering & historical context
+  - Development
+  - Testing
+  - Updates & maintenance
 
-## File-System Routing
+> SDLC ensures continuous improvement and maintainable software.
 
-- Next.js uses **file-based routing** → every file in `pages/` becomes a route.
-- Examples:
+## Technology Choices
+
+- Stay updated with **modern technologies**.
+- Learn both **frameworks and libraries**.
+- Example: **Next.js (framework) + React (library)** for scalable web apps.
+
+## Next.js Overview
+
+- Open-source JavaScript framework by **Vercel**.
+- Built for **fast web application development and hosting**.
+- Requires basic **JavaScript** and some **React** knowledge.
+
+### Key Concepts in Web Application Development
+
+- Navigation: User movement between pages
+- Data Handling: Efficient data retrieval and display
+- Rendering: Static vs dynamic content
+- Integration: Third-party services (analytics, payments)
+- Hosting & Execution: Server-client interaction
+- Performance & Scalability: Optimize for user growth
+
+## Learning Approach
+
+- Hands-on learning with **React** and **Next.js**
+- Focus on **real-world applications**
+- Prepare for **software developer roles**
+
+## Modern App Flexibility & Developer Experience
+
+- Apps must be **scalable** to handle traffic changes.
+- **Developer experience (DX)** is crucial.
+- **TypeScript** enhances productivity by preventing errors.
+
+## React & User Interfaces
+
+- React builds **interactive, dynamic, high-performing UIs**.
+- Next.js extends React with **routing, server-side rendering, and integrations**.
+
+## Next.js Framework Details
+
+- Multiple rendering techniques:
+
+  - **Client-Side Rendering (CSR)**
+  - **Server-Side Rendering (SSR)**
+  - **Static Site Generation (SSG)**
+
+- Automatic routing via **pages directory**
+
+## Client-Server Architecture
+
+- Client: User’s browser/device
+- Server: Remote data storage and delivery
+- Next.js simplifies server-client operations
+
+## Next.js Project Setup
+
+1. Install Node.js and npm/yarn
+2. Create project:
+
+```bash
+npx create-next-app@latest <project-name>
+```
+
+3. Project structure includes:
+
+   - React for UI
+   - Pages folder for routing
+   - Basic dependencies ready
+
+## Development Server
+
+- Runs on **localhost:3000** by default
+- Supports **hot-reloading**
+- Auto-increments ports if multiple servers run
+
+## Page Creation & Routing
+
+- File-based routing in **pages directory**
+- Example:
+
   - `pages/index.js` → `/`
-  - `pages/posts/first-post.js` → `/posts/first-post`
+  - `pages/post/first-post.js` → `/post/first-post`
 
----
+- Navigation using Next.js **`<Link>`**
+- Prefetching for faster load times
 
-## 🔗 Navigation with `<Link>`
+## Static Assets & Images
 
-Use the `<Link>` component for fast **client-side navigation**.
+- Store images/fonts in **public directory**
+- Use **Next.js Image component** for optimization:
 
-```jsx
-import Link from "next/link";
+  - Modern formats
+  - Lazy loading
+  - Build-time optimization
 
-export default function Home() {
-  return (
-    <div>
-      <h1>Home Page</h1>
-      <Link href="/posts/first-post">Go to First Post</Link>
-    </div>
-  );
-}
-```
+- Supports local & external URLs
 
----
+## Page Metadata & SEO
 
-## 🖼️ Image Optimization
+- Set titles & meta tags with Next.js **`Head` component**
+- Each page can have **custom metadata**
 
-Next.js `<Image>` component provides:
+## Adding Scripts & Third-Party Services
 
-- Automatic resizing
-- Lazy loading
-- Performance optimization
+- Add scripts in the **Head**
+- Integrate analytics, chat, rating systems
+- Use **Next.js Script component** for optimized execution:
 
-```jsx
-import Image from "next/image";
-import profilePic from "../public/profile.jpg";
+  - Strategies: `beforeInteractive`, `afterInteractive`, etc.
+  - Reduces performance impact
 
-export default function Profile() {
-  return <Image src={profilePic} alt="Profile" width={200} height={200} />;
-}
-```
+## Styling in Next.js
 
----
+- **CSS Modules:** Component-scoped styling
 
-## 📝 Metadata with `<Head>`
+  - Unique class names
+  - Example: `layout.module.css` for Layout component
 
-Customize the HTML `<head>` for SEO and titles.
+- **Global CSS:** Shared styles across all pages (imported in `app.js`)
+- **Utility Classes:** Reusable styles across multiple components
 
-```jsx
-import Head from "next/head";
+## Layout Components
 
-export default function FirstPost() {
-  return (
-    <>
-      <Head>
-        <title>My First Post</title>
-        <meta name="description" content="This is my first blog post" />
-      </Head>
-      <h1>First Post</h1>
-    </>
-  );
-}
-```
+- Reusable components for consistent page structures
+- Pass data to child components
+- Example: `components/Layout.js` + `components/layout.module.css`
+- Promotes **DRY principle**
 
----
+## Page Content & Reusability
 
-## 📜 Third-Party Scripts
+- Components can receive **props** for dynamic content
+- Layout & reusable components maintain **design consistency**
+- Example: Home page with Layout + content + navigation link
 
-Load external scripts using `<Script>` with different strategies.
+## Development & Testing Best Practices
 
-```jsx
-import Script from "next/script";
+- Restart server after major changes
+- Inspect auto-generated CSS class names
+- Combine **CSS modules, global CSS, and utility classes** for scalable styling
 
-export default function Analytics() {
-  return (
-    <>
-      <h1>My App</h1>
-      <Script src="https://example.com/analytics.js" strategy="lazyOnload" />
-    </>
-  );
-}
-```
+## Best Practices Summary
 
----
-
-## 🎨 Styling Options in Next.js
-
-You can style in multiple ways:
-
-1. **Global CSS** – in `styles/globals.css` (imported in `_app.js`).
-2. **CSS Modules** – scoped styles per component:
-   ```jsx
-   import styles from "./button.module.css";
-   export default function Button() {
-     return <button className={styles.primary}>Click Me</button>;
-   }
-   ```
-3. **Styled JSX** (built-in).
-4. **Utility frameworks** like Tailwind CSS.
-
----
-
-## 🧩 Layout Component
-
-Create reusable layouts for consistent UI.
-
-```jsx
-import styles from "./layout.module.css";
-
-export default function Layout({ children }) {
-  return <div className={styles.container}>{children}</div>;
-}
-```
-
-Usage:
-
-```jsx
-import Layout from "../components/layout";
-
-export default function FirstPost() {
-  return (
-    <Layout>
-      <h1>First Post</h1>
-    </Layout>
-  );
-}
-```
-
----
-
-## Rendering Approaches in Next.js
-
-### 1. Client-Side Rendering (CSR)
-
-- Content fetched **in the browser after page load**.
-- Example: **YouTube** (shows skeleton, then loads videos).
-
-### 2. Server-Side Rendering (SSR)
-
-- Content fetched **on the server per request**.
-- Example: **Cars.com** (renders complete page with data).
-
-### 3. Static Site Generation (SSG)
-
-- Pages are generated **at build time**.
-- Best for **blogs, portfolios, landing pages**.
-
----
-
-## Key Aspects of Modern App Development
-
-- **Navigation** → Seamless page transitions.
-- **Data Fetching** → Where/how data is retrieved.
-- **Rendering** → Choosing CSR, SSR, or SSG.
-- **Integration** → Payments, APIs, third-party services.
-- **Hosting/Deployment** → Platforms like **Vercel**.
-- **Performance** → Optimized images, fast loading.
-- **Scalability** → Handle high traffic smoothly.
-- **Developer Experience** → TypeScript, tooling, better productivity.
-
----
-
-## 🌍 Market Relevance
-
-- Thousands of companies use **Next.js**, many showcased on **Vercel’s platform**.
-- High adoption = **strong job opportunities**.
-- Skills in **React + Next.js** make you competitive in the global tech market.
-
----
-
-✅ With this foundation, you’re ready to build **scalable, modern, and industry-relevant web applications** using **Next.js**.
+- Use **CSS modules** for component-specific styles
+- Use **global CSS** for shared styles
+- Use **utility classes** for reusable styles
+- Use **Next.js Script component** for third-party scripts
+- Keep **layout components reusable** across pages
