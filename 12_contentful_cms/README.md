@@ -156,3 +156,7 @@ Contentful = Define structured models → Writers add entries → Developers fet
 - **CMS/Headless CMS** makes collaboration easier.
 - **Contentful** = Flexible, scalable, and integrates with modern apps.
 - **Next.js + Contentful** = Powerful combination for building dynamic, content-driven applications.
+
+**Assignment**
+
+- Create a complete frontend with next.js + CMS with contentful
